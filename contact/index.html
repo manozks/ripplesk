@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact — Ripplesk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><span class="nav-logo-name">Ripplesk</span></a>
+    <ul class="nav-links">
+      <li><a href="../features/index.html">Features</a></li><li><a href="../use-cases/index.html">Use Cases</a></li><li><a href="../pricing/index.html">Pricing</a></li><li><a href="../developers/index.html">Developers</a></li><li><a href="../resources/index.html">Resources</a></li><li><a href="index.html" class="active">Contact</a></li>
+      <li class="nav-cta"><a href="index.html" class="btn btn-primary btn-sm">Get Started</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav"><a href="../features/index.html">Features</a><a href="../use-cases/index.html">Use Cases</a><a href="../pricing/index.html">Pricing</a><a href="../developers/index.html">Developers</a><a href="../resources/index.html">Resources</a><a href="index.html">Contact</a><a href="index.html" class="btn btn-primary">Get Started</a></div>
+
+<!-- HERO -->
+<section class="page-hero" style="padding-bottom:40px;">
+  <div class="page-hero-inner" data-aos="fade-up">
+    <div class="eyebrow">✦ Get in Touch</div>
+    <h1>Let's talk</h1>
+    <p>Whether you're ready to start a trial, want a live demo, or have a question — we respond within 2 hours during business hours.</p>
+  </div>
+</section>
+
+<!-- CONTACT OPTIONS -->
+<section class="section-sm" style="background:#fff; padding-top:0;">
+  <div class="container">
+    <!-- Quick options -->
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-bottom:4rem;" data-aos="fade-up">
+      <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--r-md); padding:1.75rem; text-align:center;">
+        <div style="width:48px;height:48px;background:rgba(70,77,57,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;font-size:1.3rem;">💬</div>
+        <h3 style="font-size:1rem; margin-bottom:.45rem;">Free Trial</h3>
+        <p style="font-size:.85rem; margin-bottom:1.1rem;">14 days of full Pro access. No credit card needed.</p>
+        <a href="#contact-form" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Get Started Free</a>
+      </div>
+      <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--r-md); padding:1.75rem; text-align:center;">
+        <div style="width:48px;height:48px;background:rgba(70,77,57,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;font-size:1.3rem;">📅</div>
+        <h3 style="font-size:1rem; margin-bottom:.45rem;">Book a Demo</h3>
+        <p style="font-size:.85rem; margin-bottom:1.1rem;">See Ripplesk live with a product specialist. 30 mins.</p>
+        <a href="#contact-form" class="btn btn-outline btn-sm" style="width:100%; justify-content:center;">Book Demo</a>
+      </div>
+      <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--r-md); padding:1.75rem; text-align:center;">
+        <div style="width:48px;height:48px;background:rgba(70,77,57,.08);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem;font-size:1.3rem;">🏢</div>
+        <h3 style="font-size:1rem; margin-bottom:.45rem;">Talk to Sales</h3>
+        <p style="font-size:.85rem; margin-bottom:1.1rem;">Enterprise plans, volume pricing, and agency programs.</p>
+        <a href="#contact-form" class="btn btn-outline btn-sm" style="width:100%; justify-content:center;">Contact Sales</a>
+      </div>
+    </div>
+
+    <!-- FORM + INFO -->
+    <div class="two-col" style="gap:4rem; align-items:start;" id="contact-form">
+
+      <!-- FORM -->
+      <div data-aos="fade-right">
+        <h2 style="font-size:1.8rem; margin-bottom:.4rem;">Send us a message</h2>
+        <p style="margin-bottom:1.75rem; font-size:.95rem;">We'll get back to you within a few hours on business days.</p>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/example" method="POST">
+            <div class="form-row">
+              <div class="form-group"><label for="fname">First name</label><input type="text" id="fname" name="first_name" placeholder="Jane" required/></div>
+              <div class="form-group"><label for="lname">Last name</label><input type="text" id="lname" name="last_name" placeholder="Doe" required/></div>
+            </div>
+            <div class="form-group"><label for="email">Work email</label><input type="email" id="email" name="email" placeholder="jane@company.com" required/></div>
+            <div class="form-group"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Acme Corp"/></div>
+            <div class="form-group"><label for="team_size">Team size</label>
+              <select id="team_size" name="team_size">
+                <option value="">Select…</option>
+                <option>1–5</option><option>6–20</option><option>21–100</option><option>100+</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="interest">I'm interested in…</label>
+              <select id="interest" name="interest">
+                <option value="">Select…</option>
+                <option>Free trial</option><option>Live demo</option><option>Enterprise pricing</option><option>Agency program</option><option>Technical question</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us about your support needs or any questions you have…" required></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; font-size:.95rem; padding:.85rem;">
+              Send Message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <p style="text-align:center; font-size:.75rem; color:var(--text-muted); margin-top:.6rem;">By submitting you agree to our <a href="#" style="color:var(--primary);">Privacy Policy</a>. No spam, ever.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- INFO PANEL -->
+      <div data-aos="fade-left">
+        <!-- Contact details -->
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--r-md); padding:1.75rem; margin-bottom:1.25rem;">
+          <h3 style="font-size:1rem; margin-bottom:1.25rem;">Direct contact</h3>
+          <div style="display:flex; flex-direction:column; gap:1.1rem;">
+            <div style="display:flex; gap:.75rem; align-items:flex-start;">
+              <div style="width:34px;height:34px;background:rgba(70,77,57,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><div style="font-size:.78rem; font-weight:600; color:var(--text-dark); margin-bottom:2px;">Email</div><a href="mailto:hello@ripplesk.com" style="font-size:.88rem; color:var(--primary);">hello@ripplesk.com</a></div>
+            </div>
+            <div style="display:flex; gap:.75rem; align-items:flex-start;">
+              <div style="width:34px;height:34px;background:rgba(70,77,57,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div><div style="font-size:.78rem; font-weight:600; color:var(--text-dark); margin-bottom:2px;">Hours</div><span style="font-size:.88rem; color:var(--text-soft);">Mon–Fri, 9am–6pm EST</span></div>
+            </div>
+            <div style="display:flex; gap:.75rem; align-items:flex-start;">
+              <div style="width:34px;height:34px;background:rgba(70,77,57,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><div style="font-size:.78rem; font-weight:600; color:var(--text-dark); margin-bottom:2px;">HQ</div><span style="font-size:.88rem; color:var(--text-soft);">San Francisco, CA, USA</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Response time card -->
+        <div style="background:rgba(70,77,57,.06); border:1px solid rgba(70,77,57,.12); border-radius:var(--r-md); padding:1.5rem; margin-bottom:1.25rem;">
+          <div style="display:flex; align-items:center; gap:.6rem; margin-bottom:.3rem;"><div style="width:8px;height:8px;background:#22c55e;border-radius:50%;"></div><span style="font-size:.85rem; font-weight:600;">Typical response time</span></div>
+          <div style="font-family:'Poppins',sans-serif; font-size:2rem; font-weight:800; color:var(--primary);">Under 2 hours</div>
+          <p style="font-size:.78rem; color:var(--text-muted); margin:0;">During business hours</p>
+        </div>
+
+        <!-- Trust stats -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:.85rem;">
+          <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem; text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.4rem; font-weight:800; color:var(--primary);">12,000+</div><div style="font-size:.72rem; color:var(--text-muted);">Businesses served</div></div>
+          <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem; text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.4rem; font-weight:800; color:var(--primary);">4.9★</div><div style="font-size:.72rem; color:var(--text-muted);">G2 & Capterra rating</div></div>
+          <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem; text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.4rem; font-weight:800; color:var(--primary);">20 min</div><div style="font-size:.72rem; color:var(--text-muted);">Avg setup time</div></div>
+          <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-sm); padding:1rem; text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.4rem; font-weight:800; color:var(--primary);">99.99%</div><div style="font-size:.72rem; color:var(--text-muted);">Uptime SLA</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><a href="../index.html" class="nav-logo" style="margin-bottom:.2rem;"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><span class="nav-logo-name" style="color:#fff;">Ripplesk</span></a><p class="footer-brand-desc">AI-powered customer support platform.</p><div class="footer-socials"><a href="#" class="social-btn" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a href="#" class="social-btn" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a></div></div>
+    <div class="footer-col"><h4>Product</h4><ul><li><a href="../features/index.html">Features</a></li><li><a href="../integrations/index.html">Integrations</a></li><li><a href="../pricing/index.html">Pricing</a></li></ul></div>
+    <div class="footer-col"><h4>Use Cases</h4><ul><li><a href="../use-cases/retail.html">Retail</a></li><li><a href="../use-cases/gaming.html">Gaming</a></li><li><a href="../use-cases/saas.html">SaaS</a></li><li><a href="../use-cases/fintech.html">Fintech</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="index.html">Contact</a></li><li><a href="#">Privacy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Ripplesk, Inc. All rights reserved.</span><span>ripplesk.com</span></div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

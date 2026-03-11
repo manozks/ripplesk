@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Developers — Ripplesk API Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><span class="nav-logo-name">Ripplesk</span></a>
+    <ul class="nav-links">
+      <li><a href="../features/index.html">Features</a></li><li><a href="../use-cases/index.html">Use Cases</a></li><li><a href="../pricing/index.html">Pricing</a></li><li><a href="index.html" class="active">Developers</a></li><li><a href="../resources/index.html">Resources</a></li><li><a href="../contact/index.html">Contact</a></li>
+      <li class="nav-cta"><a href="../contact/index.html" class="btn btn-primary btn-sm">Get Started</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav"><a href="../features/index.html">Features</a><a href="../use-cases/index.html">Use Cases</a><a href="../pricing/index.html">Pricing</a><a href="index.html">Developers</a><a href="../resources/index.html">Resources</a><a href="../contact/index.html">Contact</a><a href="../contact/index.html" class="btn btn-primary">Get Started</a></div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner" data-aos="fade-up">
+    <div class="eyebrow">⚙️ Developers</div>
+    <h1>Build with the Ripplesk API</h1>
+    <p>RESTful API, real-time webhooks, and SDKs for JavaScript, Python, PHP, and Go. Get running in minutes.</p>
+    <div style="display:flex; gap:.85rem; justify-content:center; flex-wrap:wrap;">
+      <a href="https://docs.ripplesk.com" target="_blank" rel="noopener" class="btn btn-primary btn-lg">View Full Documentation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+      <a href="#quickstart" class="btn btn-outline btn-lg">Quick Start</a>
+    </div>
+    <!-- Stats bar -->
+    <div style="display:flex; gap:2.5rem; justify-content:center; margin-top:2.8rem; flex-wrap:wrap;">
+      <div style="text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:800; color:var(--primary);">99.99%</div><div style="font-size:.75rem; color:var(--text-muted);">API Uptime</div></div>
+      <div style="text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:800; color:var(--primary);">&lt;50ms</div><div style="font-size:.75rem; color:var(--text-muted);">Avg Response</div></div>
+      <div style="text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:800; color:var(--primary);">4 SDKs</div><div style="font-size:.75rem; color:var(--text-muted);">Official Libraries</div></div>
+      <div style="text-align:center;"><div style="font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:800; color:var(--primary);">REST + WS</div><div style="font-size:.75rem; color:var(--text-muted);">Protocols</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="dev-layout">
+  <!-- SIDEBAR -->
+  <aside class="dev-sidebar">
+    <div class="dev-nav-group"><h4>Getting Started</h4>
+      <a href="#overview"   class="dev-nav-link active">Overview</a>
+      <a href="#quickstart" class="dev-nav-link">Quick Start</a>
+      <a href="#auth"       class="dev-nav-link">Authentication</a>
+    </div>
+    <div class="dev-nav-group"><h4>Core API</h4>
+      <a href="#conversations" class="dev-nav-link">Conversations</a>
+      <a href="#messages"      class="dev-nav-link">Messages</a>
+      <a href="#contacts"      class="dev-nav-link">Contacts</a>
+    </div>
+    <div class="dev-nav-group"><h4>Events</h4>
+      <a href="#webhooks" class="dev-nav-link">Webhooks</a>
+    </div>
+    <div class="dev-nav-group"><h4>SDKs</h4>
+      <a href="#sdks" class="dev-nav-link">JavaScript</a>
+      <a href="#sdks" class="dev-nav-link">Python</a>
+      <a href="#sdks" class="dev-nav-link">PHP</a>
+      <a href="#sdks" class="dev-nav-link">Go</a>
+    </div>
+    <div style="margin-top:2rem; background:rgba(70,77,57,.06); border-radius:var(--r-sm); padding:1.1rem; border:1px solid var(--border);">
+      <p style="font-size:.78rem; color:var(--text-muted); margin-bottom:.75rem; line-height:1.6;">Need the complete reference with all schemas and error codes?</p>
+      <a href="https://docs.ripplesk.com" target="_blank" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">Full Docs ↗</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- OVERVIEW -->
+    <div class="dev-section" id="overview" data-aos="fade-up">
+      <h2>API Overview</h2>
+      <p>The Ripplesk API is a RESTful HTTP API for building custom integrations, automating conversations, managing contacts, and controlling your support platform programmatically. All requests use HTTPS and return JSON.</p>
+      <p><strong>Base URL:</strong></p>
+      <div class="code-block" style="margin-bottom:1.25rem;"><div class="code-body active" style="color:var(--gold);">https://api.ripplesk.com/v1</div></div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.25rem;">
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--r-sm); padding:1.1rem;"><div style="font-size:.85rem; margin-bottom:.4rem;">🔐 <strong>Secure</strong></div><p style="font-size:.8rem; margin:0;">TLS 1.3 only. API keys scoped by permission.</p></div>
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--r-sm); padding:1.1rem;"><div style="font-size:.85rem; margin-bottom:.4rem;">⚡ <strong>Rate Limits</strong></div><p style="font-size:.8rem; margin:0;">1,000 req/min on Pro. 10,000 on Enterprise.</p></div>
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:var(--r-sm); padding:1.1rem;"><div style="font-size:.85rem; margin-bottom:.4rem;">📦 <strong>Versioned</strong></div><p style="font-size:.8rem; margin:0;">Current: <span class="ic">v1</span>. Breaking changes are versioned.</p></div>
+      </div>
+    </div>
+
+    <!-- QUICKSTART -->
+    <div class="dev-section" id="quickstart" data-aos="fade-up">
+      <h2>Quick Start</h2>
+      <p>Get your first conversation created in under 5 minutes. Pick your language:</p>
+      <div class="code-block">
+        <div class="code-tabs">
+          <div class="code-tab active" data-tab="qs-curl">cURL</div>
+          <div class="code-tab" data-tab="qs-js">JavaScript</div>
+          <div class="code-tab" data-tab="qs-py">Python</div>
+          <div class="code-tab" data-tab="qs-php">PHP</div>
+        </div>
+        <div class="code-body active" data-body="qs-curl">
+<span class="cm"># Create a conversation via cURL</span>
+curl -X POST https://api.ripplesk.com/v1/conversations \
+  -H <span class="str">"Authorization: Bearer rsk_live_YOUR_KEY"</span> \
+  -H <span class="str">"Content-Type: application/json"</span> \
+  -d <span class="str">'{
+    "channel": "web",
+    "contact": {
+      "name": "Jane Doe",
+      "email": "jane@example.com"
+    },
+    "message": "Hello! How can I help you today?"
+  }'</span>
+        </div>
+        <div class="code-body" data-body="qs-js">
+<span class="cm">// npm install @ripplesk/sdk</span>
+<span class="kw">import</span> Ripplesk <span class="kw">from</span> <span class="str">'@ripplesk/sdk'</span>;
+
+<span class="kw">const</span> client = <span class="kw">new</span> <span class="mt">Ripplesk</span>({ apiKey: <span class="str">'rsk_live_YOUR_KEY'</span> });
+
+<span class="kw">const</span> conversation = <span class="kw">await</span> client.conversations.<span class="mt">create</span>({
+  channel: <span class="str">'web'</span>,
+  contact: { name: <span class="str">'Jane Doe'</span>, email: <span class="str">'jane@example.com'</span> },
+  message: <span class="str">'Hello! How can I help you today?'</span>
+});
+
+console.<span class="mt">log</span>(<span class="str">`Created: ${conversation.id}`</span>);
+        </div>
+        <div class="code-body" data-body="qs-py">
+<span class="cm"># pip install ripplesk</span>
+<span class="kw">import</span> ripplesk
+
+client = ripplesk.<span class="mt">Client</span>(api_key=<span class="str">"rsk_live_YOUR_KEY"</span>)
+
+conversation = client.conversations.<span class="mt">create</span>(
+  channel=<span class="str">"web"</span>,
+  contact={<span class="str">"name"</span>: <span class="str">"Jane Doe"</span>, <span class="str">"email"</span>: <span class="str">"jane@example.com"</span>},
+  message=<span class="str">"Hello! How can I help you today?"</span>
+)
+<span class="kw">print</span>(<span class="str">f"Created: {conversation['id']}"</span>)
+        </div>
+        <div class="code-body" data-body="qs-php">
+<span class="cm">// composer require ripplesk/ripplesk-php</span>
+<span class="kw">use</span> Ripplesk\Client;
+
+<span class="kw">$client</span> = <span class="kw">new</span> <span class="mt">Client</span>(<span class="str">'rsk_live_YOUR_KEY'</span>);
+
+<span class="kw">$conv</span> = <span class="kw">$client</span>->conversations-><span class="mt">create</span>([
+  <span class="str">'channel'</span> => <span class="str">'web'</span>,
+  <span class="str">'contact'</span> => [<span class="str">'name'</span> => <span class="str">'Jane Doe'</span>, <span class="str">'email'</span> => <span class="str">'jane@example.com'</span>],
+  <span class="str">'message'</span> => <span class="str">'Hello!'</span>
+]);
+<span class="kw">echo</span> <span class="str">"Created: "</span> . <span class="kw">$conv</span>[<span class="str">'id'</span>];
+        </div>
+      </div>
+    </div>
+
+    <!-- AUTH -->
+    <div class="dev-section" id="auth" data-aos="fade-up">
+      <h2>Authentication</h2>
+      <p>Pass your API key in the <span class="ic">Authorization</span> header on every request:</p>
+      <div class="code-block" style="margin-bottom:1.25rem;"><div class="code-body active">Authorization: Bearer <span class="str">rsk_live_xxxxxxxxxxxxxxxxxxxxxxxx</span></div></div>
+      <table class="param-tbl">
+        <thead><tr><th>Key Type</th><th>Prefix</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td>Live key</td><td><span class="ic">rsk_live_</span></td><td>Production</td></tr>
+          <tr><td>Test key</td><td><span class="ic">rsk_test_</span></td><td>Development — no real messages sent</td></tr>
+          <tr><td>Restricted key</td><td><span class="ic">rsk_res_</span></td><td>Scoped to specific resources</td></tr>
+        </tbody>
+      </table>
+      <div style="background:rgba(245,158,11,.08); border:1px solid rgba(245,158,11,.2); border-radius:var(--r-sm); padding:.9rem 1.1rem; margin-top:1rem; display:flex; gap:.65rem; align-items:flex-start;">
+        <span style="flex-shrink:0; margin-top:1px;">⚠️</span>
+        <p style="margin:0; font-size:.85rem; color:#92400e;">Never expose API keys in client-side code or public repos. Use environment variables and rotate regularly.</p>
+      </div>
+    </div>
+
+    <!-- CONVERSATIONS -->
+    <div class="dev-section" id="conversations" data-aos="fade-up">
+      <h2>Conversations</h2>
+      <p>The central resource — each conversation belongs to a contact, has a channel, and contains a message thread.</p>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-get">GET</span><span class="ep-path">/v1/conversations</span><span class="ep-desc">List conversations</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-post">POST</span><span class="ep-path">/v1/conversations</span><span class="ep-desc">Create a conversation</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-get">GET</span><span class="ep-path">/v1/conversations/:id</span><span class="ep-desc">Retrieve one conversation</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-put">PUT</span><span class="ep-path">/v1/conversations/:id</span><span class="ep-desc">Update a conversation</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-delete">DELETE</span><span class="ep-path">/v1/conversations/:id</span><span class="ep-desc">Delete a conversation</span></div></div>
+      <h3>Response example</h3>
+      <div class="code-block"><div class="code-body active">
+{
+  <span class="str">"id"</span>: <span class="str">"conv_9f3kp2"</span>,
+  <span class="str">"channel"</span>: <span class="str">"whatsapp"</span>,
+  <span class="str">"status"</span>: <span class="str">"open"</span>,
+  <span class="str">"contact"</span>: {
+    <span class="str">"id"</span>: <span class="str">"cnt_abc123"</span>,
+    <span class="str">"name"</span>: <span class="str">"Jane Doe"</span>,
+    <span class="str">"email"</span>: <span class="str">"jane@example.com"</span>
+  },
+  <span class="str">"labels"</span>: [<span class="str">"billing"</span>, <span class="str">"urgent"</span>],
+  <span class="str">"created_at"</span>: <span class="str">"2025-06-14T09:23:11Z"</span>
+}
+      </div></div>
+    </div>
+
+    <!-- MESSAGES -->
+    <div class="dev-section" id="messages" data-aos="fade-up">
+      <h2>Messages</h2>
+      <p>Send and retrieve messages within a conversation. Sender can be <span class="ic">agent</span>, <span class="ic">bot</span>, or <span class="ic">contact</span>.</p>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-get">GET</span><span class="ep-path">/v1/conversations/:id/messages</span><span class="ep-desc">List messages</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-post">POST</span><span class="ep-path">/v1/conversations/:id/messages</span><span class="ep-desc">Send a message</span></div></div>
+      <table class="param-tbl" style="margin-top:1rem;">
+        <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><span class="ic">content</span></td><td><span class="ic">string</span></td><td><span class="badge-req">required</span></td><td>Message text</td></tr>
+          <tr><td><span class="ic">type</span></td><td><span class="ic">string</span></td><td><span class="badge-req">required</span></td><td><span class="ic">outgoing</span> | <span class="ic">note</span> | <span class="ic">template</span></td></tr>
+          <tr><td><span class="ic">sender</span></td><td><span class="ic">object</span></td><td><span class="badge-req">required</span></td><td>Sender <span class="ic">type</span> and <span class="ic">id</span></td></tr>
+          <tr><td><span class="ic">attachments</span></td><td><span class="ic">array</span></td><td><span class="badge-opt">optional</span></td><td>File attachment objects</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="dev-section" id="contacts" data-aos="fade-up">
+      <h2>Contacts</h2>
+      <p>Manage your customers. Each contact can have multiple conversations across channels.</p>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-get">GET</span><span class="ep-path">/v1/contacts</span><span class="ep-desc">List contacts</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-post">POST</span><span class="ep-path">/v1/contacts</span><span class="ep-desc">Create a contact</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-get">GET</span><span class="ep-path">/v1/contacts/:id</span><span class="ep-desc">Retrieve a contact</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-put">PUT</span><span class="ep-path">/v1/contacts/:id</span><span class="ep-desc">Update a contact</span></div></div>
+      <div class="endpoint-card"><div class="endpoint-row"><span class="method-badge mb-delete">DELETE</span><span class="ep-path">/v1/contacts/:id</span><span class="ep-desc">Delete a contact</span></div></div>
+    </div>
+
+    <!-- WEBHOOKS -->
+    <div class="dev-section" id="webhooks" data-aos="fade-up">
+      <h2>Webhooks</h2>
+      <p>Subscribe to real-time events. Ripplesk POST requests to your URL whenever something happens.</p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:.5rem; margin-bottom:1.5rem;">
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:7px; padding:.55rem .85rem; font-family:'Courier New',monospace; font-size:.8rem; color:var(--text-mid);">conversation.created</div>
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:7px; padding:.55rem .85rem; font-family:'Courier New',monospace; font-size:.8rem; color:var(--text-mid);">conversation.resolved</div>
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:7px; padding:.55rem .85rem; font-family:'Courier New',monospace; font-size:.8rem; color:var(--text-mid);">message.created</div>
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:7px; padding:.55rem .85rem; font-family:'Courier New',monospace; font-size:.8rem; color:var(--text-mid);">message.read</div>
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:7px; padding:.55rem .85rem; font-family:'Courier New',monospace; font-size:.8rem; color:var(--text-mid);">contact.created</div>
+        <div style="background:var(--bg); border:1px solid var(--border); border-radius:7px; padding:.55rem .85rem; font-family:'Courier New',monospace; font-size:.8rem; color:var(--text-mid);">bot.handoff</div>
+      </div>
+      <h3>Webhook payload example</h3>
+      <div class="code-block"><div class="code-body active">
+{
+  <span class="str">"event"</span>: <span class="str">"message.created"</span>,
+  <span class="str">"timestamp"</span>: <span class="str">"2025-06-14T09:23:11Z"</span>,
+  <span class="str">"account_id"</span>: <span class="str">"acc_abc123"</span>,
+  <span class="str">"data"</span>: {
+    <span class="str">"message"</span>: {
+      <span class="str">"id"</span>: <span class="str">"msg_99xyz"</span>,
+      <span class="str">"content"</span>: <span class="str">"Where is my order?"</span>,
+      <span class="str">"type"</span>: <span class="str">"incoming"</span>,
+      <span class="str">"conversation_id"</span>: <span class="str">"conv_9f3kp2"</span>,
+      <span class="str">"sender"</span>: { <span class="str">"type"</span>: <span class="str">"contact"</span>, <span class="str">"id"</span>: <span class="str">"cnt_abc123"</span> },
+      <span class="str">"created_at"</span>: <span class="str">"2025-06-14T09:23:11Z"</span>
+    }
+  }
+}
+      </div></div>
+    </div>
+
+    <!-- SDKs -->
+    <div class="dev-section" id="sdks" data-aos="fade-up">
+      <h2>SDKs &amp; Libraries</h2>
+      <p>Official open-source SDKs — all actively maintained with typed interfaces and full API coverage.</p>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1rem;">
+        <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-md); padding:1.25rem; display:flex; gap:.85rem; align-items:center;"><div style="width:42px;height:42px;background:#fef9c3;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🟨</div><div><div style="font-weight:700; font-size:.9rem; margin-bottom:2px;">JavaScript / Node.js</div><div style="font-family:'Courier New',monospace; font-size:.72rem; color:var(--text-muted); margin-bottom:5px;">npm install @ripplesk/sdk</div><a href="#" style="font-size:.75rem; font-weight:600; color:var(--primary);">GitHub →</a></div></div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-md); padding:1.25rem; display:flex; gap:.85rem; align-items:center;"><div style="width:42px;height:42px;background:#e0e7ff;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🐍</div><div><div style="font-weight:700; font-size:.9rem; margin-bottom:2px;">Python</div><div style="font-family:'Courier New',monospace; font-size:.72rem; color:var(--text-muted); margin-bottom:5px;">pip install ripplesk</div><a href="#" style="font-size:.75rem; font-weight:600; color:var(--primary);">GitHub →</a></div></div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-md); padding:1.25rem; display:flex; gap:.85rem; align-items:center;"><div style="width:42px;height:42px;background:#f3e8ff;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🐘</div><div><div style="font-weight:700; font-size:.9rem; margin-bottom:2px;">PHP</div><div style="font-family:'Courier New',monospace; font-size:.72rem; color:var(--text-muted); margin-bottom:5px;">composer require ripplesk/php</div><a href="#" style="font-size:.75rem; font-weight:600; color:var(--primary);">GitHub →</a></div></div>
+        <div style="background:#fff; border:1px solid var(--border); border-radius:var(--r-md); padding:1.25rem; display:flex; gap:.85rem; align-items:center;"><div style="width:42px;height:42px;background:#d1fae5;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">🐹</div><div><div style="font-weight:700; font-size:.9rem; margin-bottom:2px;">Go</div><div style="font-family:'Courier New',monospace; font-size:.72rem; color:var(--text-muted); margin-bottom:5px;">go get github.com/ripplesk/go-sdk</div><a href="#" style="font-size:.75rem; font-weight:600; color:var(--primary);">GitHub →</a></div></div>
+      </div>
+
+      <!-- Full docs CTA -->
+      <div style="background:var(--primary-dark); border-radius:var(--r-xl); padding:2.5rem; text-align:center; margin-top:3rem; position:relative; overflow:hidden;">
+        <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.07),transparent 65%);"></div>
+        <div style="position:relative;z-index:1;">
+          <h3 style="color:#fff; font-size:1.3rem; margin-bottom:.5rem;">Need the full API reference?</h3>
+          <p style="color:rgba(255,255,255,.55); font-size:.9rem; margin-bottom:1.5rem;">All endpoints, schemas, error codes, pagination, filtering, and changelog.</p>
+          <a href="https://docs.ripplesk.com" target="_blank" rel="noopener" class="btn btn-white btn-lg">View Full Documentation <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><a href="../index.html" class="nav-logo" style="margin-bottom:.2rem;"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><span class="nav-logo-name" style="color:#fff;">Ripplesk</span></a><p class="footer-brand-desc">AI-powered customer support platform.</p></div>
+    <div class="footer-col"><h4>Developers</h4><ul><li><a href="index.html">API Reference</a></li><li><a href="index.html#webhooks">Webhooks</a></li><li><a href="index.html#sdks">SDKs</a></li></ul></div>
+    <div class="footer-col"><h4>Product</h4><ul><li><a href="../features/index.html">Features</a></li><li><a href="../pricing/index.html">Pricing</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="../contact/index.html">Contact</a></li><li><a href="#">Privacy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Ripplesk, Inc. All rights reserved.</span><span>ripplesk.com</span></div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/main.js"></script>
+<script>
+// sidebar active link on scroll
+const sections=document.querySelectorAll('.dev-section[id]');
+const links=document.querySelectorAll('.dev-nav-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(s.getBoundingClientRect().top<=100)current=s.id;});
+  links.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+current)l.classList.add('active');});
+},{passive:true});
+</script>
+</body>
+</html>

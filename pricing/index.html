@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pricing — Ripplesk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+<link rel="stylesheet" href="../css/styles.css"/>
+<style>
+.toggle-wrap { display:flex; align-items:center; gap:.75rem; justify-content:center; margin-bottom:3rem; }
+.toggle-label { font-size:.9rem; font-weight:500; color:var(--text-soft); }
+.toggle-label.active { color:var(--text-dark); font-weight:600; }
+.toggle-switch { position:relative; width:48px; height:26px; }
+.toggle-switch input { opacity:0; width:0; height:0; }
+.toggle-slider { position:absolute; cursor:pointer; inset:0; background:var(--primary); border-radius:var(--r-full); transition:.3s; }
+.toggle-slider::before { position:absolute; content:""; height:20px; width:20px; left:3px; bottom:3px; background:#fff; border-radius:50%; transition:.3s; }
+.toggle-switch input:checked + .toggle-slider::before { transform:translateX(22px); }
+.save-badge { background:rgba(34,197,94,.12); color:#16a34a; font-size:.7rem; font-weight:700; padding:.2rem .55rem; border-radius:var(--r-full); }
+/* comparison table */
+.cmp-table { width:100%; border-collapse:collapse; margin-top:3rem; }
+.cmp-table th { padding:1rem 1.25rem; text-align:left; font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted); border-bottom:2px solid var(--border); }
+.cmp-table th.plan { text-align:center; }
+.cmp-table td { padding:.85rem 1.25rem; border-bottom:1px solid var(--border-light); font-size:.88rem; color:var(--text-soft); vertical-align:middle; }
+.cmp-table td.plan-val { text-align:center; font-size:.95rem; }
+.cmp-table tr:last-child td { border-bottom:none; }
+.cmp-table .section-row td { background:var(--bg-alt); font-weight:700; font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted); padding:.6rem 1.25rem; }
+.check-yes { color:#22c55e; font-size:1.1rem; }
+.check-no  { color:var(--border); font-size:1.1rem; }
+</style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><span class="nav-logo-name">Ripplesk</span></a>
+    <ul class="nav-links">
+      <li><a href="../features/index.html">Features</a></li><li><a href="../use-cases/index.html">Use Cases</a></li><li><a href="index.html" class="active">Pricing</a></li><li><a href="../developers/index.html">Developers</a></li><li><a href="../resources/index.html">Resources</a></li><li><a href="../contact/index.html">Contact</a></li>
+      <li class="nav-cta"><a href="../contact/index.html" class="btn btn-primary btn-sm">Get Started</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav"><a href="../features/index.html">Features</a><a href="../use-cases/index.html">Use Cases</a><a href="index.html">Pricing</a><a href="../developers/index.html">Developers</a><a href="../resources/index.html">Resources</a><a href="../contact/index.html">Contact</a><a href="../contact/index.html" class="btn btn-primary">Get Started</a></div>
+
+<section class="page-hero">
+  <div class="page-hero-inner" data-aos="fade-up">
+    <div class="eyebrow">💰 Pricing</div>
+    <h1>Simple, transparent pricing</h1>
+    <p>Start free. Scale as you grow. No hidden fees, no per-message charges, no surprises.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px;">
+  <div class="container">
+
+    <!-- TOGGLE -->
+    <div class="toggle-wrap" data-aos="fade-up">
+      <span class="toggle-label active" id="lbl-monthly">Monthly</span>
+      <label class="toggle-switch"><input type="checkbox" id="billing-toggle"/><span class="toggle-slider"></span></label>
+      <span class="toggle-label" id="lbl-annual">Annual <span class="save-badge">Save 20%</span></span>
+    </div>
+
+    <!-- CARDS -->
+    <div class="pricing-grid" data-aos="fade-up">
+
+      <!-- STARTER -->
+      <div class="price-card">
+        <div class="price-plan">Starter</div>
+        <div>
+          <span class="price-amount price-monthly"><span class="price-cur">$</span>29</span>
+          <span class="price-amount price-annual" style="display:none;"><span class="price-cur">$</span>23</span>
+        </div>
+        <div class="price-period">per month · billed <span class="price-monthly">monthly</span><span class="price-annual" style="display:none;">annually</span></div>
+        <div class="price-desc">Perfect for small teams and early-stage products getting started with AI support.</div>
+        <ul class="price-features">
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>2 agents included</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>1 AI chatbot</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>2 channels (web + 1 messaging)</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Basic analytics</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Email support</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>API access (read-only)</li>
+        </ul>
+        <a href="../contact/index.html" class="btn btn-outline price-cta">Start Free Trial</a>
+      </div>
+
+      <!-- PRO (featured) -->
+      <div class="price-card popular">
+        <div class="pop-badge">Most Popular</div>
+        <div class="price-plan">Pro</div>
+        <div>
+          <span class="price-amount price-monthly"><span class="price-cur">$</span>79</span>
+          <span class="price-amount price-annual" style="display:none;"><span class="price-cur">$</span>63</span>
+        </div>
+        <div class="price-period">per month · billed <span class="price-monthly">monthly</span><span class="price-annual" style="display:none;">annually</span></div>
+        <div class="price-desc">The complete toolkit for growing teams handling high conversation volume across multiple channels.</div>
+        <ul class="price-features">
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Unlimited agents</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>3 AI chatbots</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>All channels (WhatsApp, Telegram, Slack…)</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Advanced analytics & reports</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Automation & workflows</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Full API + webhooks</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Priority support</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>CSAT surveys</li>
+        </ul>
+        <a href="../contact/index.html" class="btn btn-white price-cta">Start Free Trial</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="price-card">
+        <div class="price-plan">Enterprise</div>
+        <div class="price-amount" style="font-size:2.2rem;">Custom</div>
+        <div class="price-period">volume pricing · dedicated SLA</div>
+        <div class="price-desc">Tailored for large organizations that need custom integrations, SLAs, and dedicated support.</div>
+        <ul class="price-features">
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Everything in Pro</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Unlimited AI chatbots</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Dedicated account manager</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Custom SLA & uptime guarantee</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>SSO / SAML authentication</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Custom integrations</li>
+          <li><div class="pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>On-site onboarding</li>
+        </ul>
+        <a href="../contact/index.html" class="btn btn-outline price-cta">Contact Sales</a>
+      </div>
+
+    </div>
+
+    <!-- COMPARISON TABLE -->
+    <div data-aos="fade-up" style="overflow-x:auto; margin-top:4rem;">
+      <h2 style="text-align:center; margin-bottom:.5rem;">Plan comparison</h2>
+      <p style="text-align:center; color:var(--text-muted); margin-bottom:2rem; font-size:.9rem;">See exactly what's included in each plan.</p>
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th style="width:40%;">Feature</th>
+            <th class="plan">Starter</th>
+            <th class="plan" style="color:var(--primary);">Pro</th>
+            <th class="plan">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="section-row"><td colspan="4">Core</td></tr>
+          <tr><td>Agents</td><td class="plan-val">2</td><td class="plan-val">Unlimited</td><td class="plan-val">Unlimited</td></tr>
+          <tr><td>AI Chatbots</td><td class="plan-val">1</td><td class="plan-val">3</td><td class="plan-val">Unlimited</td></tr>
+          <tr><td>Channels</td><td class="plan-val">2</td><td class="plan-val">All</td><td class="plan-val">All</td></tr>
+          <tr><td>Conversations / month</td><td class="plan-val">2,000</td><td class="plan-val">Unlimited</td><td class="plan-val">Unlimited</td></tr>
+          <tr class="section-row"><td colspan="4">AI Features</td></tr>
+          <tr><td>AI-powered responses</td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>Sentiment detection</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>Auto translation (95 langs)</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>Conversation summaries</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr class="section-row"><td colspan="4">Analytics & Reporting</td></tr>
+          <tr><td>Basic dashboard</td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>Advanced reports</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>CSAT surveys</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>Custom report builder</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr class="section-row"><td colspan="4">Security & Compliance</td></tr>
+          <tr><td>SSO / SAML</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>Custom data retention</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+          <tr><td>Dedicated SLA</td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-no">–</span></td><td class="plan-val"><span class="check-yes">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FAQ -->
+    <div style="max-width:680px; margin:5rem auto 0;" data-aos="fade-up">
+      <h2 style="text-align:center; margin-bottom:2rem;">Frequently asked questions</h2>
+      <div class="acc-item"><div class="acc-header">Is there a free trial?<div class="acc-chevron"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Yes — every plan starts with a 14-day free trial. No credit card required. You get full access to all Pro features during your trial period.</div></div></div>
+      <div class="acc-item"><div class="acc-header">Can I change plans later?<div class="acc-chevron"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Absolutely. You can upgrade or downgrade at any time. Upgrades take effect immediately. Downgrades take effect at the next billing cycle.</div></div></div>
+      <div class="acc-item"><div class="acc-header">What payment methods do you accept?<div class="acc-chevron"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">We accept all major credit and debit cards via Stripe. Enterprise plans can also pay by bank transfer or invoice.</div></div></div>
+      <div class="acc-item"><div class="acc-header">Do you offer refunds?<div class="acc-chevron"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">We offer a 30-day money-back guarantee on monthly plans. If you're not happy with Ripplesk for any reason, contact us within 30 days for a full refund.</div></div></div>
+      <div class="acc-item"><div class="acc-header">How does per-agent pricing work?<div class="acc-chevron"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Starter includes 2 agents. Pro includes unlimited agents. You'll never be charged per seat on Pro — add as many team members as you need.</div></div></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-band" style="margin-top:80px;">
+  <div class="container">
+    <h2>Start your free trial today.</h2>
+    <p>No credit card required. Full Pro access for 14 days.</p>
+    <div class="cta-actions"><a href="../contact/index.html" class="btn btn-white btn-lg">Get Started Free</a><a href="../contact/index.html" class="btn btn-outline-white btn-lg">Talk to Sales</a></div>
+    <p class="cta-sub">Join 12,000+ businesses already on Ripplesk</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><a href="../index.html" class="nav-logo" style="margin-bottom:.2rem;"><div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div><span class="nav-logo-name" style="color:#fff;">Ripplesk</span></a><p class="footer-brand-desc">AI-powered customer support platform.</p></div>
+    <div class="footer-col"><h4>Product</h4><ul><li><a href="../features/index.html">Features</a></li><li><a href="../integrations/index.html">Integrations</a></li><li><a href="index.html">Pricing</a></li></ul></div>
+    <div class="footer-col"><h4>Developers</h4><ul><li><a href="../developers/index.html">API Reference</a></li><li><a href="../developers/index.html">SDKs</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="../contact/index.html">Contact</a></li><li><a href="#">Privacy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Ripplesk, Inc. All rights reserved.</span><span>ripplesk.com</span></div>
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="../js/main.js"></script>
+<script>
+const t=document.getElementById('billing-toggle');
+const lm=document.getElementById('lbl-monthly');
+const la=document.getElementById('lbl-annual');
+if(t){t.addEventListener('change',()=>{
+  const on=t.checked;
+  document.querySelectorAll('.price-monthly').forEach(e=>e.style.display=on?'none':'inline');
+  document.querySelectorAll('.price-annual').forEach(e=>e.style.display=on?'inline':'none');
+  lm.classList.toggle('active',!on);
+  la.classList.toggle('active',on);
+});}
+</script>
+</body>
+</html>
