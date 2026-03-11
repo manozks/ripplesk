@@ -202,7 +202,8 @@ p  { color: var(--text-soft); line-height: 1.75; }
   transition: color .18s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-.nav-cta { margin-left: .5rem; }
+.nav-cta { margin-left: .5rem;   }
+.nav-cta a{color: #fff!important; }
 .hamburger {
   display: none;
   flex-direction: column;
